@@ -8,7 +8,7 @@
     "prettier-all": "./node_modules/.bin/prettier --write 'src/**/*.js'",
     "test": "mocha --require babel-register src/**/*.test.js",
     "eslint": "eslint src",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged && yarn test",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
