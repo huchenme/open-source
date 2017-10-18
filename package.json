@@ -2,7 +2,7 @@
   "name": "starwars-names-open-source",
   "version": "0.0.0-development",
   "description": "Get random Star Wars names",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "commit": "git-cz",
     "prettier-all": "./node_modules/.bin/prettier --write 'src/**/*.js'",
@@ -12,7 +12,9 @@
     "check-coverage": "nyc check-coverage --statements 95 --lines 95 --functions 95 --branches 95",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "precommit": "lint-staged",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "prebuild": "rimraf dist",
+    "build": "babel --copy-files src -d dist --ignore **/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,10 @@
     "random",
     "star",
     "wars"
+  ],
+  "files": [
+    "dist",
+    "README.md"
   ],
   "author": "Hu Chen <chen@huchen.me> (http://huchen.me/)",
   "license": "MIT",
@@ -33,6 +39,7 @@
     "unique-random-array": "^1.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
@@ -51,6 +58,7 @@
     "mocha": "^4.0.1",
     "nyc": "^11.2.1",
     "prettier": "1.7.4",
+    "rimraf": "^2.6.2",
     "semantic-release": "^8.2.0"
   },
   "config": {
