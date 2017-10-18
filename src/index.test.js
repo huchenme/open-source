@@ -4,13 +4,10 @@ import { all, random } from './index';
 describe('starwars-names-open-source', () => {
   describe('all', () => {
     it('should return an array of strings', () => {
-      expect(all).to.satisfy(isArrayOfStrings);
+      const isArrayOfStrings = array =>
+        array.every(item => typeof item === 'string');
 
-      function isArrayOfStrings(array) {
-        return array.every(function(item) {
-          return typeof item === 'string';
-        });
-      }
+      expect(all).to.satisfy(isArrayOfStrings);
     });
 
     it('should contains `Skywalker`', () => {
@@ -22,6 +19,14 @@ describe('starwars-names-open-source', () => {
     it('should return a random item from the starWarsNames.all', () => {
       const randomItem = random();
       expect(all).to.include(randomItem);
+    });
+
+    it('should return an array of random items if passed a number', () => {
+      const randomItems = random(3);
+      expect(randomItems).to.have.length(3);
+      randomItems.forEach(item => {
+        expect(all).to.include(item);
+      });
     });
   });
 });

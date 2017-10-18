@@ -1,0 +1,12 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "env": {
+    "mocha": true
+  },
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": 2
+  }
+}
