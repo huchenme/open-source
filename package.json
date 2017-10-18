@@ -1,0 +1,27 @@
+{
+  "name": "starwars-names-open-source",
+  "version": "1.0.0",
+  "description": "Get random Star Wars names",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huchenme/open-source.git"
+  },
+  "keywords": [
+    "random",
+    "star",
+    "wars"
+  ],
+  "author": "Hu Chen <chen@huchen.me> (http://huchen.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huchenme/open-source/issues"
+  },
+  "homepage": "https://github.com/huchenme/open-source#readme",
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  }
+}
