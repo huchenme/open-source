@@ -1,4 +1,1 @@
-# open-source
-
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Build Status](https://travis-ci.org/huchenme/open-source.svg?branch=master)](https://travis-ci.org/huchenme/open-source)
+# open-source [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Build Status](https://travis-ci.org/huchenme/open-source.svg?branch=master)](https://travis-ci.org/huchenme/open-source) [![Coverage Status](https://coveralls.io/repos/github/huchenme/open-source/badge.svg?branch=master)](https://coveralls.io/github/huchenme/open-source?branch=master)
