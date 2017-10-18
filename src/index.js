@@ -15,4 +15,4 @@ const random = number => {
   return randomItems;
 };
 
-export { starWarsNames as all, random };
+export { starWarsNames as allNames, random };
