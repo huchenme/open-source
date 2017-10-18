@@ -6,8 +6,9 @@
   "scripts": {
     "commit": "git-cz",
     "prettier-all": "./node_modules/.bin/prettier --write 'src/**/*.js'",
-    "test:watch": "mocha --require babel-register src/**/*.test.js -w",
-    "test": "yarn eslint && nyc --reporter=html --reporter=text mocha --require babel-register src/**/*.test.js",
+    "test:watch": "yarn test:js -w",
+    "test:js": "mocha --require babel-register src/**/*.test.js",
+    "test": "yarn eslint && nyc --reporter=html --reporter=text yarn test:js",
     "eslint": "eslint src",
     "check-coverage": "nyc check-coverage --statements 95 --lines 95 --functions 95 --branches 95",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
