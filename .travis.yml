@@ -9,11 +9,11 @@ node_js:
   - '6'
   - '4'
 before_script:
-  - npm prune
+  - yarn prune
 script:
-  - npm test
+  - yarn test
 after_success:
-  - npm run semantic-release
+  - yarn semantic-release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
