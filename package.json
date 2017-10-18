@@ -7,9 +7,11 @@
     "commit": "git-cz",
     "prettier-all": "./node_modules/.bin/prettier --write 'src/**/*.js'",
     "test:watch": "mocha --require babel-register src/**/*.test.js -w",
-    "test": "nyc mocha --require babel-register src/**/*.test.js",
+    "test": "yarn eslint && nyc --reporter=html --reporter=text mocha --require babel-register src/**/*.test.js",
     "eslint": "eslint src",
-    "precommit": "lint-staged && npm test",
+    "check-coverage": "nyc check-coverage --statements 95 --lines 95 --functions 95 --branches 95",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "precommit": "lint-staged",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -35,6 +37,7 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "commitizen": "^2.9.6",
+    "coveralls": "^3.0.0",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
