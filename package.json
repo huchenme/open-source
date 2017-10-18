@@ -1,15 +1,16 @@
 {
   "name": "starwars-names-open-source",
-  "version": "1.2.0",
+  "version": "0.0.0-development",
   "description": "Get random Star Wars names",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
     "test": "mocha --require babel-register src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huchenme/open-source.git"
+    "url": "https://github.com/huchenme/open-source.git"
   },
   "keywords": [
     "random",
@@ -23,10 +24,20 @@
   },
   "homepage": "https://github.com/huchenme/open-source#readme",
   "dependencies": {
-    "unique-random-array": "1.0.0"
+    "unique-random-array": "^1.0.0"
+  },
+  "devDependencies": {
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
     "mocha": "^4.0.1",
+    "semantic-release": "^8.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
