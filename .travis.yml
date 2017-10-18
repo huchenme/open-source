@@ -7,9 +7,9 @@ notifications:
 node_js:
   - '8'
 script:
-  - npm test
+  - yarn test
 after_success:
-  - npm run semantic-release
+  - yarn semantic-release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
