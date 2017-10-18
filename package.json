@@ -6,7 +6,7 @@
   "scripts": {
     "commit": "git-cz",
     "prettier-all": "./node_modules/.bin/prettier --write 'src/**/*.js'",
-    "test": "mocha --require babel-register src/index.test.js -w",
+    "test": "npm run eslint && mocha --require babel-register src/**/*.test.js",
     "eslint": "eslint src",
     "precommit": "lint-staged",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
